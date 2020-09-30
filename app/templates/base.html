@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&family=Grenze+Gotisch:wght@500&family=Literata:wght@400;600&family=Lobster&family=Marck+Script&family=Merienda+One&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-    <header class= ' container site-header'>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
-            <a href="/" class="navbar-brand">BOSS</a>
-          
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <header class= 'container site-header'>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a href="/" class="navbar-brand"><span>BOSS</span></a>
+            <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse" ">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse" >
                 <div class="navbar-nav mr-auto">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="/about" class="nav-item nav-link">About</a>
+                    <a  href="/" class="nav-item nav-link active"><span> Home</span></a>
+                    <a href="/about" class="nav-item nav-link"><span>About</span></a>
+                    
                 </div>
+                
             </div>
 
         </nav>
@@ -36,6 +38,56 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
 </body>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4" style="background-color: #D3D0CB;color: #393E41;">
 
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Boss Blog</h5>
+          <h6 class="font-weight-bold">Contacts:</h6>
+          <h6 >Email:<h6>
+          <h6>Tel:</h6>
+
+          <h6 class="font-weight-bold">Address:</h6>
+          <h6>Nairobi,Kenya</h6>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3" >
+  
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Thank You!</h5>
+          <p>Thank you for visiting our website,please leave a post article and some comments on the other articles.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Text -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> <span style="color: #393E41;"> Boss Blog</span></a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 </html>
