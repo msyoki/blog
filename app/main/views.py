@@ -6,6 +6,7 @@ from flask_login import login_required,current_user
 from datetime import datetime
 from .. import db,photos
 
+
 @main.route('/')
 def home():
     title= 'Home - Pitch APP '
