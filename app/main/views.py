@@ -86,7 +86,7 @@ def new_blog():
 @login_required
 def fashion_blogs():
 
-    blogs = blog.get_blogs('fashion')
+    blogs = Blog.get_blogs('fashion')
 
     return render_template("fashion_blogs.html", blogs = blogs)
 
@@ -94,7 +94,7 @@ def fashion_blogs():
 @login_required
 def lifestyle_blogs():
 
-    blogs = Plog.get_blogs('lifestyle')
+    blogs = Blog.get_blogs('lifestyle')
 
     return render_template("lifestyle_blogs.html", blogs = blogs)
 
@@ -102,7 +102,7 @@ def lifestyle_blogs():
 @login_required
 def travel_blogs():
 
-    blogs = Plog.get_blogs('travel')
+    blogs = Blog.get_blogs('travel')
 
     return render_template("travel_blogs.html", blogs = blogs)
 
@@ -112,7 +112,7 @@ def travel_blogs():
 @login_required
 def music_blogs():
 
-    blogs = Plog.get_blogs('music')
+    blogs = Blog.get_blogs('music')
 
     return render_template("music_blogs.html", blogs = blogs)
 
@@ -121,7 +121,7 @@ def music_blogs():
 @login_required
 def fitness_blogs():
 
-    blogs = Plog.get_blogs('fitness')
+    blogs = Blog.get_blogs('fitness')
 
     return render_template("fitness_blogs.html", blogs = blogs)
 

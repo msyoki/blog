@@ -4,8 +4,8 @@
 {% import 'macros.html' as macro %}
 
 {% block content %}
-<div class="container" style="margin-bottom:150px; margin-top: 100px;"> 
-  <h2>Music Blogs</h2>
+<div class="container" style="padding-top:100px;padding-bottom: 200px;"> 
+  <h2>Music Blogs  <a href="{{url_for('main.new_blog')}}"><button class="btn btn-success"style="float: right;">Create Blog</button></a></h2>
   <hr>
   <article class="media content-section">
       <div class="media-body">
