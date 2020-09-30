@@ -67,7 +67,7 @@ def update_pic(uname):
 def new_blog():
     blog_form = BlogForm()
     if blog_form.validate_on_submit():
-        title = blogh_form.title.data
+        title = blog_form.title.data
         blog = blog_form.text.data
         category = blog_form.category.data
 
