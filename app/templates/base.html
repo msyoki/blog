@@ -29,7 +29,7 @@
         </div>
         <!--Navbar to the right signin/signup-->
         <ul class="nav navbar-nav navbar-right">
-          <li style="color:white;padding:15px;font-weight: bold;color:#D3D0CB;">{{current_user.username}}</li>
+          <li ><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white;padding:15px;font-weight: bold;color:#D3D0CB;">{{current_user.username}}</a></li>
           <div>
             <a href="{{url_for('auth.register')}}"  style="color:white;padding:10px;font-weight: bold;">Sign up</a>
           </div>
