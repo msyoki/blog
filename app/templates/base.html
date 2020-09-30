@@ -12,17 +12,29 @@
 <body>
     <header class= 'container site-header'>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a href="/" class="navbar-brand"><span>BOSS</span></a>
-            <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse" ">
+            <span><a href="/" class="navbar-brand" style="color: white;">BOSS</a></span>
+            <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" >
                 <div class="navbar-nav mr-auto">
-                    <a  href="/" class="nav-item nav-link active"><span> Home</span></a>
-                    <a href="/about" class="nav-item nav-link"><span>About</span></a>
-                    
+                  <span><a  href="/" class="nav-item nav-link active" style="color:white;">Home</a></span>
+                  <span><a href="/about" class="nav-item nav-link" style="color:white;">About</a></span>
                 </div>
-                
+                <!--Navbar to the right signin/signup-->
+                <ul class="nav navbar-nav navbar-right">
+                  <li style="color:white;padding:15px;font-weight: bold;color:#D3D0CB;">{{current_user.username}}</li>
+                  <div>
+                    <a href="{{url_for('auth.register')}}"  style="color:white;padding:10px;font-weight: bold;">Sign up</a>
+                  </div>
+                  {% if current_user.is_authenticated %}
+                  
+                  <li><a href="{{url_for('auth.logout')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign out</a></li>
+                  {% else %}
+                  <li><a href="{{url_for('auth.login')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign in</a></li>
+                  {%endif%}
+                </ul>
+           
             </div>
 
         </nav>
