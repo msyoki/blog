@@ -10,50 +10,56 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-    <header class= 'container site-header'>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <span><a href="/" class="navbar-brand" style="color: white;">BOSS</a></span>
-            <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" >
-                <div class="navbar-nav mr-auto">
-                  <span><a  href="/" class="nav-item nav-link active" style="color:white;">Home</a></span>
-                  <span><a href="/about" class="nav-item nav-link" style="color:white;">About</a></span>
-                </div>
-                <!--Navbar to the right signin/signup-->
-                <ul class="nav navbar-nav navbar-right">
-                  <li style="color:white;padding:15px;font-weight: bold;color:#D3D0CB;">{{current_user.username}}</li>
-                  <div>
-                    <a href="{{url_for('auth.register')}}"  style="color:white;padding:10px;font-weight: bold;">Sign up</a>
-                  </div>
-                  {% if current_user.is_authenticated %}
-                  
-                  <li><a href="{{url_for('auth.logout')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign out</a></li>
-                  {% else %}
-                  <li><a href="{{url_for('auth.login')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign in</a></li>
-                  {%endif%}
-                </ul>
-           
-            </div>
-
-        </nav>
-    </header>
-    <main role="main" class="container">
-        <div >
-        {% block content %}{% endblock %}
+  <header class= 'container site-header'>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <span><a href="/" class="navbar-brand" style="color: white;">BOSS</a></span>
+      <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse" >
+        <div class="navbar-nav mr-auto">
+          <span><a  href="/" class="nav-item nav-link active" style="color:white;">Home</a></span>
+          <span><a href="/about" class="nav-item nav-link" style="color:white;">About</a></span>
+          <a href="{{url_for('main.fashion_blogs')}}" class="nav-item nav-link" style="color:#D3D0CB;">Fashion</a>
+          <a href="{{url_for('main.lifestyle_blogs')}}" class="nav-item nav-link" style="color:#D3D0CB;">Lifestyle</a>
+          <a href="{{url_for('main.travel_blogs')}}" class="nav-item nav-link" style="color:#D3D0CB;">Travel</a>
+          <a href="{{url_for('main.music_blogs')}}" class="nav-item nav-link" style="color:#D3D0CB;">Music</a>
+          <a href="{{url_for('main.fitness_blogs')}}" class="nav-item nav-link" style="color:#D3D0CB;">Fitness</a>
+          
         </div>
-    </main>
+        <!--Navbar to the right signin/signup-->
+        <ul class="nav navbar-nav navbar-right">
+          <li style="color:white;padding:15px;font-weight: bold;color:#D3D0CB;">{{current_user.username}}</li>
+          <div>
+            <a href="{{url_for('auth.register')}}"  style="color:white;padding:10px;font-weight: bold;">Sign up</a>
+          </div>
+          {% if current_user.is_authenticated %}
+          
+          <li><a href="{{url_for('auth.logout')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign out</a></li>
+          {% else %}
+          <li><a href="{{url_for('auth.login')}}" style="color:white;padding: 10px;;font-weight: bold;">Sign in</a></li>
+          {%endif%}
+        </ul>
+      
+      </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
+    </nav>
+  </header>
+  <main role="main" class="container">
+      <div >
+      {% block content %}{% endblock %}
+      </div>
+  </main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
 </body>
 <!-- Footer -->
-<footer class="page-footer font-small pt-4" style="background-color: #D3D0CB;color: #393E41;">
+<footer class="page-footer font-small pt-4" style="background-color: #D3D0CB;color: #393E41;padding-top: 100px;">
 
     <!-- Footer Text -->
     <div class="container-fluid text-center text-md-left">
