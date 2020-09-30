@@ -9,7 +9,7 @@
     <div >
         <h3>{{blog.blog_title}}</h3>
         <hr>
-        <p>"<i>{{blog.blog_content}}</i>"</p>
+        <p>"{{blog.blog_content}}"</p>
         <br>
         <p>Posted on {{date}} by {{blog.user.username| capitalize}}</p>
         <a href="/blog/{{blog.id}}?like=1">
