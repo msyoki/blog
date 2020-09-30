@@ -5,12 +5,14 @@ from .forms import UpdateProfile,BlogForm,CommentForm
 from flask_login import login_required,current_user
 from datetime import datetime
 from .. import db,photos
+from app import requests
 
 
 @main.route('/')
 def home():
     title= 'Home - Pitch APP '
-    return render_template('index.html',title=title)
+    quote = requests.get_quote()
+    return render_template('index.html',title=title, quote=quote)
 
 @main.route('/about')
 def about():
